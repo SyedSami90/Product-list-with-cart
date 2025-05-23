@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body>
-    <main>
-      <div id="product-list"></div>
-    </main>
+  <body class="p-7">
+    <h1 class="text-4xl font-bold">Desserts</h1>
+
+    <ul id="product-list" class="overflow-x-hidden"></ul>
+
+    <div id="Cart" class="mt-7">
+      <div class="bg-white rounded-lg flex flex-col p-6">
+
+      <h1 class="text-2xl font-bold text-[hsl(14,86%,42%)] mb-4">Your Cart (0)</h1>
+      <img src="assets/images/illustration-empty-cart.svg" alt="" class="w-40 mb-4 self-center" />
+      <p class="self-center text-[hsl(12,20%,44%)] font-semibold">Your added items will appear here</p>
+    </div>
+    </div>
+
+
+
+    
+    
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
