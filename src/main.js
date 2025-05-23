@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             let msg = document.createElement('p')
 
             let currentText = document.createElement('div')
-            currentText.innerHTML = `<div class="text-[hsl(12,20%,44%)] mb-1">${element.category}</div> <div class="font-bold text-lg mb-1">${element.name}</div> <div class="text-[hsl(14,86%,42%)] font-semibold text-lg">$${element.price}</div>
+            currentText.innerHTML = `<div class="text-[hsl(12,20%,44%)] mb-1">${element.category}</div> <div class="font-semibold text-lg mb-1">${element.name}</div> <div class="text-[hsl(14,86%,42%)] font-semibold text-lg">$${element.price.toFixed(2)}</div>
             `
             msg.innerText = 'Add to Cart'
             msg.classList.add('font-semibold')
