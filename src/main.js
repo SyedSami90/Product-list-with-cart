@@ -1,6 +1,13 @@
 import './style.css'; 
 const product_list = document.getElementById('product-list') 
 
+function chooseImg(data){
+    const w = window.innerWidth
+    if (w >= 1024) return data.image.desktop 
+    else if (w >=600)return data.image.tablet
+    return data.image.mobile
+} 
+
 document.addEventListener('DOMContentLoaded',()=>{
     console.log('DOM successfully loaded')
 
@@ -20,7 +27,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             msg.innerText = 'Add to Cart'
             msg.classList.add('font-semibold')
 
-            currentImg.src = element.image.mobile
+            // currentImg.src = element.image.mobile
+            currentImg.src = chooseImg(element)
             cartImg.src = '/assets/images/icon-add-to-cart.svg'
 
             
@@ -31,7 +39,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             product_list.append(li)
 
             currentImg.classList.add('rounded-lg','my-9') //my-9 was her 
-            currentBtn.classList.add('bg-white','flex','items-center','gap-2','border-[1px]','border-[hsl(12,20%,44%)]','p-3', 'px-9', 'rounded-4xl','absolute','translate-y-[-69px]','cursor-pointer','left-1/2', '-translate-x-1/2','min-w-[200px]','justify-center') //worry about translate-x later
+            currentBtn.classList.add('bg-white','flex','items-center','gap-2','border-[1px]','border-[hsl(12,20%,44%)]','p-3', 'px-9', 'rounded-4xl','absolute','translate-y-[-69px]','cursor-pointer','left-1/2', '-translate-x-1/2','min-w-[200px]','justify-center','hover:border-[hsl(14,86%,42%)]','transition-transform','duration-200','hover:translate-y-[-71px]') //worry about translate-x later
             li.classList.add('relative')
             //<button class="flex items-center gap-2 border-[1px] p-3 px-9 rounded-4xl">
         }

@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body class="py-7 px-9 h-screen lg:grid grid-rows-[auto_1fr]">
-    <p class="text-4xl font-bold">Desserts</p>
+  <body class="py-7 px-9 h-screen lg:grid grid-cols-[1fr_auto] gap-7">
 
-    <main class="">
-      <ul id="product-list" class="overflow-x-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></ul>
+    <main>
+      <p class="text-4xl font-bold">Desserts</p>
 
-      <div id="Cart" class="mt-9 max-w-[650px]">
-        <div class="bg-white rounded-lg flex flex-col p-6">
-          <h1 class="text-2xl font-bold text-[hsl(14,86%,42%)] mb-4">Your Cart (0)</h1>
-          <img src="assets/images/illustration-empty-cart.svg" alt="" class="w-40 mb-4 self-center" />
-          <p class="self-center text-[hsl(12,20%,44%)] font-semibold">Your added items will appear here</p>
-        </div>
-      </div>
+      <ul id="product-list" class="overflow-x-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 lg:mb-16"></ul>
     </main>
+    
+
+    <div id="Cart" class="mt-9 lg:min-w-[390px] max-w-[625px] lg:mt-0">
+      <div class="bg-white rounded-lg flex flex-col p-6">
+        <h1 class="text-2xl font-bold text-[hsl(14,86%,42%)] mb-4">Your Cart (0)</h1>
+        <img src="assets/images/illustration-empty-cart.svg" alt="" class="w-40 mb-4 self-center" />
+        <p class="self-center text-[hsl(12,20%,44%)] font-semibold">Your added items will appear here</p>
+      </div>
+    </div>
+
 
     
 
